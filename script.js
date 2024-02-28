@@ -18,7 +18,7 @@ function init() {
 }
 
 init();
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     init();
 });
 
@@ -45,8 +45,8 @@ function rollSlider() {
 }
 
 function updateBars() {
-    bars.forEach(bar => bar.classList.remove('active-bar')); 
-    bars[count].classList.add('active-bar'); 
+    bars.forEach(bar => bar.classList.remove('active-bar'));
+    bars[count].classList.add('active-bar');
 }
 
 function adjustButtonsPosition() {
