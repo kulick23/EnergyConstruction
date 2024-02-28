@@ -1,13 +1,13 @@
-const images = document.querySelectorAll('.slider .slider-line img');
-const sliderLine = document.querySelector('.slider .slider-line');
-const sliderNextBtn = document.querySelector('.slider-next');
-const sliderPrevBtn = document.querySelector('.slider-prev');
+const images = document.querySelectorAll('.content__slider--container .content__slider--line img');
+const sliderLine = document.querySelector('.content__slider--container .content__slider--line');
+const sliderNextBtn = document.querySelector('.slider__button--next');
+const sliderPrevBtn = document.querySelector('.slider__button--prev');
 const bars = document.querySelectorAll('.bar');
 let count = 0;
 let width;
 
 function init() {
-    width = document.querySelector('.slider').offsetWidth;
+    width = document.querySelector('.content__slider--container').offsetWidth;
     sliderLine.style.width = width * images.length + 'px';
     images.forEach(item => {
         item.style.width = width + 'px';
@@ -50,7 +50,7 @@ function updateBars() {
 }
 
 function adjustButtonsPosition() {
-    const sliderHeight = document.querySelector('.slider').offsetHeight;
+    const sliderHeight = document.querySelector('.content__slider--container').offsetHeight;
     const buttonHeight = sliderNextBtn.offsetHeight;
     const topOffset = (sliderHeight - buttonHeight) / 1.8;
 

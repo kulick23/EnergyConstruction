@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
 html {
   font-size: 12px;
   color: #404040;
@@ -19,13 +12,9 @@ body {
 }
 
 button {
-  border: none;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
   background-color: transparent;
-  line-height: inherit;
-  color: #FFFFFF;
+  color: white;
+  border: 1px solid white; 
   cursor: pointer;
 }
 
@@ -64,18 +53,10 @@ h1 {
   flex-direction: column;
   flex: 1;
 }
-
-.slider-item {
-  position: relative;
- 
+.content__slider {
+  width: 100%;
 }
-
-.slider-content {
-  position: relative;
-
-}
-
-.slider {
+.content__slider--container {
   position: relative;
   width: 80%;
   overflow: hidden;
@@ -83,8 +64,7 @@ h1 {
   text-align: center;
   padding-bottom: 40px;
 }
-
-.slider-line {
+.content__slider--line {
   width: 100%;
   height: 100%;
   display: flex;
@@ -92,12 +72,57 @@ h1 {
   left: 0;
   transition: all ease 1s;
 }
-
-.slider-container {
-  width: 100%;
+.content__slider--item {
+  position: relative;
 }
 
-.slider-dots {
+.content__slider--content {
+  position: relative;
+
+}
+
+.content__slider--textblock {
+  position: absolute;
+  bottom: -20px; 
+  left: 20px;
+  text-align: left;
+  z-index: 2;
+  background: rgba(245, 245, 245, 0.5);
+  width: calc(100% - 40px); 
+  box-sizing: border-box; 
+  backdrop-filter: blur(10px); 
+}
+.slider__textblock--content {
+  position: relative;
+  color: white;
+  padding: 10px;
+  z-index: 3; 
+}
+.slider__textblock--content .link {
+  color: blue; 
+  text-decoration: none; 
+}
+.slider__button--prev,
+.slider__button--next {
+  font-size: 50px;
+  background-color: none;
+  color: blue;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border: none;
+}
+.slider__button--prev {
+  left: 0;
+}
+
+.slider__button--next {
+  right: 0;
+}
+
+.content__slider--bars {
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -115,53 +140,64 @@ h1 {
   background-color: blue;
 }
 
-.button.slider-prev,
-.button.slider-next {
-  font-size: 50px;
-  background-color: none;
-  color: blue;
-  padding: 10px 15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  cursor: pointer;
+.content__buiding,
+ footer {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
 }
 
-.button.slider-prev {
-  left: 0;
+.content__buiding--iconblock {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  margin: 50px; 
+  text-align: center;
+}
+.content__buiding--photoblock {
+  width: 100%; 
+  height: 200px; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button.slider-next {
-  right: 0;
-}
-.text-block {
-  position: absolute;
-  bottom: -20px; /* Поднимите текстовый блок вверх, если он слишком низко */
-  left: 20px;
-  text-align: left;
-  z-index: 2;
-  background: rgba(245, 245, 245, 0.5); /* Добавьте фон для читаемости текста */
-  width: calc(100% - 40px); /* Вычтите левый и правый padding из общей ширины */
-  box-sizing: border-box; /* Учтите padding в общей ширине элемента */
-  backdrop-filter: blur(10px); 
-}
-.text-content {
+.content__buiding--photoblock::before {
+  content: "";
   position: relative;
-  color: white;
-  padding: 10px;
-  z-index: 3; /* Убедитесь, что текст находится над фоном */
-}
-.text-block h2 {
-  font-size: 1.5rem; /* Или другой размер, подходящий для вашего дизайна */
-  margin-bottom: 0.5rem;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
-.text-block p {
-  font-size: 1rem; /* Или другой размер, подходящий для вашего дизайна */
+.content__buiding--photoblock button {
+  padding: 10px 20px;
+  position:absolute;
+ 
 }
-.text-content .text-link {
-  color: blue; /* Цвет текста ссылки */
-  text-decoration: none; /* Убрать подчеркивание у ссылки */
-  /* Дополнительные стили для ссылки, если необходимо */
+.content__buiding--image1 {
+  background-image: url('../images/ikea.png');
+}
+
+.content__buiding--image2 {
+  background-image: url('../images/electro.png');
+}
+
+.content__buiding--image3 {
+  background-image: url('../images/centere.png');
+}
+.content__buiding--slideblock{
+  margin-top: 50px;
+  width: 100%; 
+  height: 250px; 
+}
+
+.footer{
+  background-color: aliceblue;
 }
