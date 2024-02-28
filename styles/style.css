@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+html {
+  font-size: 12px;
+  color: #404040;
+  font-family: 'Slab Serif';
+}
+
+body {
+  margin: 25px 17px 0 17px;
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  line-height: inherit;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  margin: 20px 0;
+  line-height: 43px;
+  text-transform: uppercase;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.header__title h1::after {
+  content: '\A';
+  white-space: pre;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.slider-item {
+  position: relative;
+ 
+}
+
+.slider-content {
+  position: relative;
+
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.slider-line {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.bar {
+  width: 20px;
+  height: 4px;
+  background-color: grey;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active-bar {
+  background-color: blue;
+}
+
+.button.slider-prev,
+.button.slider-next {
+  font-size: 50px;
+  background-color: none;
+  color: blue;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.button.slider-prev {
+  left: 0;
+}
+
+.button.slider-next {
+  right: 0;
+}
+.text-block {
+  position: absolute;
+  bottom: -20px; /* Поднимите текстовый блок вверх, если он слишком низко */
+  left: 20px;
+  text-align: left;
+  z-index: 2;
+  background: rgba(245, 245, 245, 0.5); /* Добавьте фон для читаемости текста */
+  width: calc(100% - 40px); /* Вычтите левый и правый padding из общей ширины */
+  box-sizing: border-box; /* Учтите padding в общей ширине элемента */
+  backdrop-filter: blur(10px); 
+}
+.text-content {
+  position: relative;
+  color: white;
+  padding: 10px;
+  z-index: 3; /* Убедитесь, что текст находится над фоном */
+}
+.text-block h2 {
+  font-size: 1.5rem; /* Или другой размер, подходящий для вашего дизайна */
+  margin-bottom: 0.5rem;
+}
+
+.text-block p {
+  font-size: 1rem; /* Или другой размер, подходящий для вашего дизайна */
+}
+.text-content .text-link {
+  color: blue; /* Цвет текста ссылки */
+  text-decoration: none; /* Убрать подчеркивание у ссылки */
+  /* Дополнительные стили для ссылки, если необходимо */
+}
