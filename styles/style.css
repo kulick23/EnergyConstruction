@@ -1,3 +1,6 @@
+:root{
+  --color-primary: #0568C3;
+}
 html {
   font-size: 12px;
   color: #404040;
@@ -51,15 +54,18 @@ h1 {
 
 .link,
 .more {
-  color: #0568C3;
+  color: var(--color-primary);
   text-decoration: none;
 }
-
+.link:hover{
+  color: lightblue;
+  text-decoration: underline;
+}
 .more {
   font-size: xx-small;
 }
 
 .icons {
-  color: #0568C3;
+  color: var(--color-primary);
   font-size: 90px;
 }
