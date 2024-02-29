@@ -192,7 +192,6 @@ footer {
 .content__building--photoblock button {
   padding: 10px 20px;
   position: absolute;
-
 }
 
 .content__building--image1 {
@@ -223,8 +222,6 @@ footer {
 }
 
 @media (min-width: 1024px) {
-
-
   .content__building,
   .footer {
     margin-top: 30px;
