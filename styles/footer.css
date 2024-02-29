@@ -1,5 +1,5 @@
 .footer {
-    background-image: url('../images/back.webp');
+    background-color: #F4F4F4;
 }
 
 @media (min-width: 1024px) {
@@ -12,7 +12,9 @@
         align-items: flex-start;
         flex-wrap: wrap;
     }
-
+    .footer {
+        background-image: url('../images/back.webp');
+    }
     .footer__building--iconblock {
         width: 48%;
     }
