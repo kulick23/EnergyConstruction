@@ -24,8 +24,6 @@ a {
 }
 
 h1 {
-  margin: 20px 0;
-  line-height: 43px;
   text-transform: uppercase;
 }
 
@@ -102,7 +100,7 @@ h1 {
 
 .link,
 .more {
-  color: blue;
+  color: #0568C3;
   text-decoration: none;
 }
 
@@ -114,7 +112,7 @@ h1 {
 .slider__button--next {
   font-size: 50px;
   background-color: none;
-  color: blue;
+  color: #0568C3;
   padding: 10px 15px;
   position: absolute;
   top: 50%;
@@ -146,7 +144,7 @@ h1 {
 }
 
 .active-bar {
-  background-color: blue;
+  background-color: #0568C3;
 }
 
 .content__building,
@@ -216,12 +214,12 @@ footer {
 }
 
 .icons {
-  color: blue;
+  color: #0568C3;
   font-size: 90px;
 }
 
 .footer {
-  background-color: aliceblue;
+  background-image: url('../images/back.webp');
 }
 
 @media (min-width: 1024px) {
@@ -288,15 +286,45 @@ footer {
     width: 30%;
   }
 
+  .content__slider--textblock {
+    bottom: -10px;
+    width: 45%;
+    height: 30%;
+  }
+
 
   .footer__building--iconblock {
     width: 48%;
-    margin: 1%;
+
+
+  }
+
+  .footer__building--iconblock {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .footer__building--icon {
+    margin-right: 20px;
+    font-size: 80px;
+  }
+
+  .footer__building--text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__building--text h2 {
+    text-transform: uppercase;
   }
 
   .content__slider--container {
     width: 100%;
-    /* Убедитесь, что контейнер использует всю доступную ширину */
   }
 
   .content__slider--line {
@@ -306,8 +334,12 @@ footer {
 
   .content__slider--item {
     width: 33.3333%;
-    /* Каждый слайд занимает одну треть ширины контейнера */
     flex-shrink: 0;
-    /* Предотвращает сжатие слайдов */
+    margin-right: 20px;
   }
+
+  .content__slider--item img {
+    max-width: calc(100% - 20px);
+  }
+
 }
