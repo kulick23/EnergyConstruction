@@ -1,73 +1,74 @@
 .content__building,
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .content__building--iconblock,
 .footer__building--iconblock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 50px;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+    text-align: center;
 }
 
 .content__building--desc {
-  display: none;
+    display: none;
 }
 
 .content__building--photoblock {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content__building--photoblock::before {
-  content: "";
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .content__building--photoblock button {
-  padding: 10px 20px;
-  position: absolute;
+    padding: 10px 20px;
+    position: absolute;
 }
 
 .content__building--image1 {
-  background-image: url('../images/ikea.webp');
+    background-image: url('../images/ikea.webp');
 }
 
 .content__building--image2 {
-  background-image: url('../images/electro.webp');
+    background-image: url('../images/electro.webp');
 }
 
 .content__building--image3 {
-  background-image: url('../images/centere.webp');
+    background-image: url('../images/centere.webp');
 }
 
 .content__building--slideblock {
-  margin-top: 50px;
-  width: 100%;
-  max-height: 100%;
+    margin-top: 50px;
+    width: 100%;
+    max-height: 100%;
 }
+
 @media (min-width: 1024px) {
- 
+
     .content__building--iconblock {
-      width: 30%;
-      margin: 0;
-      padding: 20px;
+        width: 30%;
+        margin: 0;
+        padding: 20px;
     }
 
     .content__building--photoblock {
@@ -76,46 +77,46 @@ footer {
         margin: 0;
         padding: 20px;
         position: relative;
-      }
-    
-      .content__building--photoblock button {
+    }
+
+    .content__building--photoblock button {
         position: absolute;
         bottom: 20px;
         left: 20px;
-      }
-    
-      .content__building--photoblock::before {
+    }
+
+    .content__building--photoblock::before {
         display: none;
-      }
-    
-      .content__button {
+    }
+
+    .content__button {
         display: none;
-      }
-    
-      .content__building--desc {
+    }
+
+    .content__building--desc {
         display: block;
-      }
-    
-      .building__textblock--content {
+    }
+
+    .building__textblock--content {
         margin-left: 20px;
-      }
-    
-      .content__building--iconblock h1 {
+    }
+
+    .content__building--iconblock h1 {
         font-size: 1.5em;
-      }
-    
-      .content__building--iconblock p {
+    }
+
+    .content__building--iconblock p {
         font-size: 1em;
-      }
-    
-      .content__building--content {
+    }
+
+    .content__building--content {
         width: 48%;
         margin-bottom: 20px;
-      }
-    
-      .content__building--textblock {
+    }
+
+    .content__building--textblock {
         bottom: -10px;
         width: 40%;
-      }
-    
+    }
+
 }

@@ -1,42 +1,43 @@
 .footer {
     background-image: url('../images/back.webp');
-  }
-  @media (min-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
 
     .content__building,
     .footer {
-      margin-top: 30px;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-start;
-      flex-wrap: wrap;
+        margin-top: 30px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
-  
+
     .footer__building--iconblock {
         width: 48%;
-      }
-    
-      .footer__building--iconblock {
+    }
+
+    .footer__building--iconblock {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-direction: row;
         margin: 10px;
         text-align: left;
-      }
-    
-      .footer__building--icon {
+    }
+
+    .footer__building--icon {
         margin-right: 20px;
         font-size: 80px;
-      }
-    
-      .footer__building--text {
+    }
+
+    .footer__building--text {
         display: flex;
         flex-direction: column;
         align-items: center;
-      }
-    
-      .footer__building--text h2 {
+    }
+
+    .footer__building--text h2 {
         text-transform: uppercase;
-      }
-  }
+    }
+}
