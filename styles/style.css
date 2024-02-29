@@ -266,7 +266,9 @@ footer {
     display: block;
   }
 
-
+  .building__textblock--content {
+    margin-left: 20px;
+  }
 
   .content__building--iconblock h1 {
     font-size: 1.5em;
@@ -283,20 +285,22 @@ footer {
 
   .content__building--textblock {
     bottom: -10px;
-    width: 30%;
+    width: 40%;
   }
 
   .content__slider--textblock {
     bottom: -10px;
-    width: 45%;
+    width: 55%;
     height: 30%;
+  }
+
+  .slider__textblock--content {
+    margin-left: 20px;
   }
 
 
   .footer__building--iconblock {
     width: 48%;
-
-
   }
 
   .footer__building--iconblock {
