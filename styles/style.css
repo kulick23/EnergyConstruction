@@ -100,9 +100,14 @@ h1 {
   z-index: 3;
 }
 
-.link {
+.link,
+.more {
   color: blue;
   text-decoration: none;
+}
+
+.more {
+  font-size: xx-small;
 }
 
 .slider__button--prev,
@@ -193,15 +198,15 @@ footer {
 }
 
 .content__building--image1 {
-  background-image: url('../images/ikea.png');
+  background-image: url('../images/ikea.webp');
 }
 
 .content__building--image2 {
-  background-image: url('../images/electro.png');
+  background-image: url('../images/electro.webp');
 }
 
 .content__building--image3 {
-  background-image: url('../images/centere.png');
+  background-image: url('../images/centere.webp');
 }
 
 .content__building--slideblock {
@@ -210,11 +215,17 @@ footer {
   max-height: 100%;
 }
 
+.icons {
+  color: blue;
+  font-size: 90px;
+}
+
 .footer {
   background-color: aliceblue;
 }
 
 @media (min-width: 1024px) {
+
 
   .content__building,
   .footer {
@@ -257,11 +268,7 @@ footer {
     display: block;
   }
 
-  .content__building--iconblock img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
+
 
   .content__building--iconblock h1 {
     font-size: 1.5em;
@@ -281,8 +288,26 @@ footer {
     width: 30%;
   }
 
+
   .footer__building--iconblock {
     width: 48%;
     margin: 1%;
+  }
+
+  .content__slider--container {
+    width: 100%;
+    /* Убедитесь, что контейнер использует всю доступную ширину */
+  }
+
+  .content__slider--line {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .content__slider--item {
+    width: 33.3333%;
+    /* Каждый слайд занимает одну треть ширины контейнера */
+    flex-shrink: 0;
+    /* Предотвращает сжатие слайдов */
   }
 }
