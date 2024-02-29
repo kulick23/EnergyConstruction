@@ -51,7 +51,7 @@
 .slider__button--next {
     font-size: 50px;
     background-color: none;
-    color: #0568C3;
+    color: var(--color-primary);
     padding: 10px 15px;
     position: absolute;
     top: 50%;
@@ -83,7 +83,7 @@
 }
 
 .active-bar {
-    background-color: #0568C3;
+    background-color: var(--color-primary);
 }
 
 @media (min-width: 1024px) {
