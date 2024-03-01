@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let count = 0;
     let width;
     let autoSlideInterval;
-    const autoSlideDelay = 3000; 
+    const autoSlideDelay = 3000;
+
     function init() {
         updateWidth();
         setEventListeners();
@@ -16,11 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function startAutoSlide() {
         autoSlideInterval = setInterval(() => {
-            count++;
-            if (count >= images.length) {
-                count = 0;
+            if (window.innerWidth >= 1024) {
+                rotateSlides('next');
+            } else {
+                count++;
+                if (count >= images.length) {
+                    count = 0;
+                }
+                rollSlider();
             }
-            rollSlider();
             updateBars();
         }, autoSlideDelay);
     }
@@ -30,24 +35,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function resumeAutoSlide() {
-        stopAutoSlide(); 
-        startAutoSlide(); 
+        stopAutoSlide();
+        startAutoSlide();
     }
 
     function updateWidth() {
         const containerWidth = document.querySelector('.content__slider--container').offsetWidth;
-        if (window.innerWidth >= 1024) {
-            width = containerWidth / 3;
-        } else {
-            width = containerWidth;
-        }
+        width = window.innerWidth >= 1024 ? containerWidth / 3 : containerWidth;
         sliderLine.style.width = width * images.length + 'px';
         images.forEach(item => {
             item.style.width = width + 'px';
             item.style.height = 'auto';
         });
         rollSlider();
-        adjustButtonsPosition(); 
+        adjustButtonsPosition();
     }
 
     function adjustButtonsPosition() {
@@ -61,21 +62,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function setEventListeners() {
         sliderNextBtn.addEventListener('click', () => {
-            count++;
-            if (count >= images.length) {
-                count = 0;
+            if (window.innerWidth >= 1024) {
+                rotateSlides('next');
+            } else {
+                count++;
+                if (count >= images.length) {
+                    count = 0;
+                }
+                rollSlider();
             }
-            rollSlider();
             updateBars();
             resumeAutoSlide();
         });
 
         sliderPrevBtn.addEventListener('click', () => {
-            count--;
-            if (count < 0) {
-                count = images.length - 1;
+            if (window.innerWidth >= 1024) {
+                rotateSlides('prev');
+            } else {
+                count--;
+                if (count < 0) {
+                    count = images.length - 1;
+                }
+                rollSlider();
             }
-            rollSlider();
             updateBars();
             resumeAutoSlide();
         });
@@ -91,12 +100,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         window.addEventListener('resize', () => {
             updateWidth();
-            adjustButtonsPosition(); 
+            adjustButtonsPosition();
         });
     }
 
     function rollSlider() {
-        sliderLine.style.transform = 'translateX(-' + count * width + 'px)';
+        if (window.innerWidth < 1024) {
+            sliderLine.style.transform = 'translateX(-' + count * width + 'px)';
+        }
     }
 
     function updateBars() {
@@ -106,6 +117,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 bar.classList.add('active-bar');
             }
         });
+    }
+
+    function rotateSlides(direction) {
+        const slides = Array.from(sliderLine.children);
+        if (direction === 'next') {
+            sliderLine.appendChild(slides[0]);
+            count = (count + 1) % images.length;
+        } else if (direction === 'prev') {
+            sliderLine.insertBefore(slides[slides.length - 1], slides[0]);
+            count = (count - 1 + images.length) % images.length;
+        }
+        updateBars();
     }
 
     init();

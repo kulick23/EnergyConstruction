@@ -69,6 +69,7 @@ footer {
         width: 30%;
         margin: 0;
         padding: 20px;
+        margin-top: 50px;
     }
 
     .content__building--photoblock {
@@ -119,4 +120,43 @@ footer {
         width: 40%;
     }
 
+    #block2 {
+        order: 1;
+    }
+
+    #block3 {
+        order: 2;
+    }
+
+    #block6 {
+        order: 3;
+    }
+
+    #block1 {
+        order: 4;
+    }
+
+    #block4 {
+        order: 5;
+    }
+
+    #block5 {
+        order: 6;
+    }
+
+    #block7 {
+        order: 7;
+    }
+
+    #block8 {
+        order: 10;
+    }
+
+    #block9 {
+        order: 9;
+    }
+
+    #block10 {
+        order: 8;
+    }
 }
