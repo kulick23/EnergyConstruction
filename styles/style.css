@@ -2,10 +2,19 @@
   --color-primary: #0568C3;
 }
 
+@font-face {
+  font-family: "quat"; 
+  src: url("../fonts/quat.otf") format("otf"); /* Формат шрифта и его расположение */
+}
+@font-face {
+  font-family: "gezart"; 
+  src: url("../fonts/gezart.otf") format("otf"); /* Формат шрифта и его расположение */
+}
+
 html {
   font-size: 12px;
   color: #404040;
-  font-family: 'Slab Serif';
+  font-family: "gezart";
 }
 
 body {

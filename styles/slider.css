@@ -67,6 +67,12 @@
 .slider__button--next {
     right: 0;
 }
+.slider__button--prev:hover,
+.slider__button--next:hover {
+  background-color: var(--color-secondary); 
+  color: lightblue; 
+}
+
 
 .content__slider--bars {
     display: flex;
@@ -87,6 +93,7 @@
 }
 
 @media (min-width: 1024px) {
+    
     .content__slider--textblock {
         bottom: -10px;
         width: 55%;
