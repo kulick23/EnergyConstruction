@@ -3,13 +3,17 @@
     margin-left: calc(-1 * 17px);
     margin-right: calc(-1 * 17px);
     width: calc(100% + 34px);
+
+}
+.footer h2{
+    text-transform: uppercase;
 }
 
 @media (min-width: 1024px) {
 
     .content__building,
     .footer {
-        margin-top: 30px;
+        margin-top: 70px;
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
@@ -18,6 +22,7 @@
 
     .footer {
         background-image: url('../images/back.webp');
+        font-size: 12px;
     }
 
     .footer__building--iconblock {

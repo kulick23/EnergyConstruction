@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./styles/slider.css" />
   <link rel="stylesheet" href="./styles/buildings.css" />
   <link rel="stylesheet" href="./styles/footer.css" />
+  <link rel="stylesheet" href="./styles/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./styles/owl.theme.default.min.css" />
 </head>
 
 <body>
@@ -17,54 +19,46 @@
     <h1 class="header__title">Объекты Энергетического строительства</h1>
   </header>
   <main class="content">
-    <div class="content__slider">
-      <div class="content__slider--container">
-        <div class="content__slider--line">
-          <div class="content__slider--item ">
-            <div class="content__slider--content">
-              <img src="./images/ikea.webp" alt="">
-              <div class="content__slider--textblock">
-                <div class="slider__textblock--content">
-                  <h2>Реконструкция ООО Делком-40</h2>
-                  <a href="*" class="link">Подробнее</a>
-                </div>
-              </div>
+    <div class="owl-carousel owl-theme ">
+
+
+
+      <div class="content__slider--item ">
+        <div class="content__slider--content">
+          <img src="./images/ikea.webp" alt="">
+          <div class="content__slider--textblock">
+            <div class="slider__textblock--content">
+              <h2>Реконструкция ООО Делком-40</h2>
+              <a href="*" class="link link__hiden">Подробнее</a>
             </div>
           </div>
-          <div class="content__slider--item ">
-            <div class="content__slider--content">
-              <img src="./images/stock.webp" alt="">
-              <div class="content__slider--textblock">
-                <div class="slider__textblock--content">
-                  <h2>Логистический центр в д. Дубовляны</h2>
-                  <a href="*" class="link">Подробнее</a>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="content__slider--item ">
+        <div class="content__slider--content">
+          <img src="./images/stock.webp" alt="">
+          <div class="content__slider--textblock">
+            <div class="slider__textblock--content">
+              <h2>Логистический центр в д. Дубовляны</h2>
+              <a href="*" class="link link__hiden">Подробнее</a>
             </div>
           </div>
-          <div class="content__slider--item ">
-            <div class="content__slider--content">
-              <img src="./images/stock2.webp" alt="">
-              <div class="content__slider--textblock">
-                <div class="slider__textblock--content">
-                  <h2>ОАО «Могилевхимволокно»</h2>
-                  <a href="*" class="link">Подробнее</a>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="content__slider--item ">
+        <div class="content__slider--content">
+          <img src="./images/stock2.webp" alt="">
+          <div class="content__slider--textblock">
+            <div class="slider__textblock--content">
+              <h2>ОАО «Могилевхимволокно»</h2>
+              <a href="*" class="link link__hiden">Подробнее</a>
             </div>
           </div>
         </div>
       </div>
 
-      <button class=" icon-prev slider__button--prev"></button>
-      <button class="icon-next slider__button--next"></button>
-
-      <div class="content__slider--bars">
-        <div class="bar" data-index="0"></div>
-        <div class="bar" data-index="1"></div>
-        <div class="bar" data-index="2"></div>
-      </div>
     </div>
+
     <div class="content__building">
       <div class="content__building--iconblock" id="block1">
         <div class="icon-factory icons"></div>
@@ -126,8 +120,9 @@
         </div>
       </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
   </main>
   <footer class="footer">
     <div class="footer__building--iconblock">

@@ -5,6 +5,11 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
+
+}
+
+.content__building {
+    font-size: 12px;
 }
 
 .content__building--iconblock,
@@ -64,6 +69,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+    .content__building {
+        margin-top: 100px;
+        font-size: 13px;
+    }
 
     .content__building--iconblock {
         width: 30%;

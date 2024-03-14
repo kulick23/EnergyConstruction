@@ -1,35 +1,19 @@
-.content__slider {
-    width: 100%;
-}
-
-.content__slider--container {
-    position: relative;
-    width: 80%;
-    overflow: hidden;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 40px;
-}
-
-.content__slider--line {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-    left: 0;
-    transition: all ease 1s;
-}
-
 .content__slider--item,
 .content__slider--content,
 .content__building--content {
     position: relative;
+
+}
+
+.content__slider--item {
+    height: 250px;
+
 }
 
 .content__slider--textblock,
 .content__building--textblock {
     position: absolute;
-    bottom: -20px;
+    bottom: -15px;
     left: 20px;
     text-align: left;
     z-index: 2;
@@ -43,8 +27,9 @@
 .slider__textblock--content .building__textblock--content {
     position: relative;
     color: white;
-    padding: 10px;
+    padding: 5px;
     z-index: 3;
+
 }
 
 .slider__button--prev,
@@ -52,7 +37,6 @@
     font-size: 50px;
     background-color: none;
     color: var(--color-primary);
-    padding: 10px 15px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -67,35 +51,16 @@
 .slider__button--next {
     right: 0;
 }
-.slider__button--prev:hover,
-.slider__button--next:hover {
-  background-color: var(--color-secondary); 
-  color: lightblue; 
+
+.content__slider--textblock {
+    font-size: 10px;
 }
 
-
-.content__slider--bars {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.bar {
-    width: 20px;
-    height: 4px;
-    background-color: grey;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.active-bar {
-    background-color: var(--color-primary);
-}
 
 @media (min-width: 1024px) {
-    
+
     .content__slider--textblock {
-        bottom: -10px;
+        bottom: -20px;
         width: 55%;
         height: 30%;
     }
@@ -104,22 +69,18 @@
         margin-left: 20px;
     }
 
-    .content__slider--container {
-        width: 100%;
-    }
-
-    .content__slider--line {
-        display: flex;
-        flex-wrap: nowrap;
-    }
 
     .content__slider--item {
-        width: 33.3333%;
-        flex-shrink: 0;
-        margin-right: 20px;
+        height: 300px;
     }
 
-    .content__slider--item img {
-        max-width: calc(100% - 20px);
+    .link__hiden {
+        display: none;
+    }
+
+    .slider__button--prev:hover,
+    .slider__button--next:hover {
+        background-color: var(--color-secondary);
+        color: lightblue;
     }
 }
